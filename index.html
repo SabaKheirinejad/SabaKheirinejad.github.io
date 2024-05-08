@@ -10,31 +10,11 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column; /* Stack header and main content vertically */
             background: #f4f4f4;
         }
-        .sidebar {
-            width: 25%;
-            background-color: #35424a;
-            color: white;
-            height: 100vh;
-            padding: 20px;
-        }
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-        .profile-pic {
-            width: 100%;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        .profile-links a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-        }
         header {
+            width: 100%;
             background: darkcyan;
             color: white;
             padding: 10px 20px;
@@ -48,11 +28,36 @@
         header a:hover {
             text-decoration: underline;
         }
+        .main-content {
+            display: flex;
+            flex-grow: 1; /* Takes up the remaining space */
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #35424a;
+            color: white;
+            padding-top: 50px; /* Adjust top padding to position the profile picture */
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .profile-pic {
+            width: 80%; /* Smaller size */
+            border-radius: 50%; /* Circular photo */
+            margin-bottom: 20px;
+            margin-left: auto; /* Center the image horizontally */
+            margin-right: auto; /* Center the image horizontally */
+        }
+        .profile-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
         @media (max-width: 768px) {
-            .sidebar, .content {
-                width: 100%;
-                height: auto;
-                padding: 10px;
+            .main-content {
+                flex-direction: column;
             }
             header {
                 text-align: center;
@@ -61,30 +66,31 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <img src="images/IMG_5723.jpg" alt="Saba Kheirinejad" class="profile-pic">
-        <p>Human-computer interaction researcher and PhD student.</p>
-        <div class="profile-links">
-            <a href="https://linkedin.com">LinkedIn</a>
-            <a href="https://scholar.google.com">Google Scholar</a>
-            <a href="https://github.com">GitHub</a>
-        </div>
-    </div>
-    <div class="content">
-        <header>
-            <a href="#home">Home</a>
-            <a href="#publications">Publications</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#cv">CV</a>
-        </header>
-        <section id="home">
-            <h1>Hi!I'm Saba.</h1>
+    <header>
+        <a href="#home">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#cv">CV</a>
+    </header>
+    <div class="main-content">
+        <div class="sidebar">
+            <img src="images/photo.jpg" alt="Saba Kheirinejad" class="profile-pic">
             <p>I am a mixed-methods human-computer interaction researcher and a fourth-year PhD student
                 at the Center for Ubiquitous Computing at the University of Oulu. Currently, 
-                I am also a visiting graduate scholar  at the Tech4good lab at the University of California, Santa Cruz (UCSC).
-            </p>
-        </section>
-        <!-- Additional sections for publications, portfolio, and CV -->
+                I am also a visiting graduate scholar at the Tech4good lab at the University of California, Santa Cruz (UCSC).</p>
+            <div class="profile-links">
+                <a href="https://linkedin.com">LinkedIn</a>
+                <a href="https://scholar.google.com">Google Scholar</a>
+                <a href="https://github.com">GitHub</a>
+            </div>
+        </div>
+        <div class="content">
+            <section id="home">
+                <h1>Welcome to My Page</h1>
+                <p>More about my projects and research can be found here.</p>
+            </section>
+            <!-- Additional sections for publications, portfolio, and CV -->
+        </div>
     </div>
 </body>
 </html>
