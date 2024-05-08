@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Saba Kheirinejad's personal academic and research portfolio">
-    <meta name="keywords" content="HCI, Human-Computer Interaction, Research, Saba Kheirinejad, PhD Student">
     <title>Saba Kheirinejad</title>
     <style>
         body {
@@ -12,90 +10,50 @@
             margin: 0;
             padding: 0;
             background: #f4f4f4;
+            display: flex;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: darkcyan; 
+        .sidebar {
+            width: 25%;
+            background-color: #35424a;
             color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #DAA520 3px solid;
+            height: 100vh; /* Full-height viewport */
+            padding: 20px;
         }
-        header h1 {
-            float: left;
+        .content {
+            width: 75%;
+            padding: 20px;
         }
-        header nav {
-            float: right;
-            margin-top: 10px;
+        .profile-pic {
+            width: 100%; /* Responsive width */
+            border-radius: 50%; /* Circular photo */
+            margin-bottom: 20px;
         }
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header a {
+        .profile-links a {
             color: white;
             text-decoration: none;
+            display: block; /* Each link on a new line */
+            margin-bottom: 10px;
         }
-        .showcase {
-            min-height: 400px;
-            text-align: center;
-        }
-        .showcase h1 {
-            padding-top: 100px;
-            color: #35424a;
-        }
-        .showcase p {
-            color: #666;
-        }
-        @media screen and (max-width: 768px) {
-            .container, header nav, .showcase {
-                width: 90%;
-                float: none;
-                text-align: center;
-            }
-            header li {
-                display: block;
-                padding: 10px;
-            }
-        }
-        footer {
-            background: #35424a;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
+        .profile-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Saba Kheirinejad</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">CV</a></li>
-                </ul>
-            </nav>
+    <div class="sidebar">
+        <img src="path_to_your_photo.jpg" alt="Saba Kheirinejad" class="profile-pic">
+        <p>I am a mixed-methods human-computer interaction researcher and a fourth-year PhD student at the University of Oulu.</p>
+        <div class="profile-links">
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://scholar.google.com">Google Scholar</a>
+            <a href="https://github.com">GitHub</a>
         </div>
-    </header>
-    <section class="showcase">
-        <div class="container">
-            <h1>Hi! I'm Saba.</h1>
-            <p>I am a mixed-methods human-computer interaction researcher and a fourth-year PhD student
-                at the Center for Ubiquitous Computing at the University of Oulu. Currently, 
-                I am also a visiting graduate scholar at the Tech4good lab at the University of California, Santa Cruz (UCSC). </p>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>Contact me at <a href="mailto:saba@example.com">saba@example.com</a></p>
-        </div>
-    </footer>
+    </div>
+    <div class="content">
+        <section class="showcase">
+            <h1>Welcome to My Page</h1>
+            <p>More about my projects and research can be found here.</p>
+        </section>
+    </div>
 </body>
 </html>
