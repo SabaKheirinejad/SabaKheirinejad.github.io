@@ -6,7 +6,7 @@
     <title>Saba Kheirinejad</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -23,7 +23,7 @@
         header a {
             color: black;
             text-decoration: none;
-            margin-left: 40px;
+            margin-left: 80px;
             font-size: 18px;
         }
         header a:hover {
@@ -41,16 +41,18 @@
         }
         .content {
             flex: 1;
-            padding: 40px;
+            padding: 80px;
+            margin-left: 80px;
         }
         .profile-pic {
-            width: 50%; /* Smaller size */
-            height: 50%;
-            border-radius: 50%; /* Circular photo */
-            margin-bottom: 20px;
-            margin-left: 40px; /* Center the image horizontally */
-            margin-right: auto; /* Center the image horizontally */
-        }
+    width: 100px;  /* Same value for width and height */
+    height: 100px; /* Ensures the dimensions are equal and the image is circular */
+    border-radius: 50%; /* Ensures the image corners are fully rounded */
+    margin-bottom: 20px;
+    margin-left: auto; /* This and the next line center the image horizontally */
+    margin-right: auto; /* without specifying the margin as 80px */
+    display: block; /* This ensures margins auto apply correctly, centering the image */
+}
         .profile-links a {
             color: black;
             text-decoration: none;
