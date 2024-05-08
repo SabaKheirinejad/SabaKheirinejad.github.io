@@ -9,51 +9,79 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
             display: flex;
+            background: #f4f4f4;
         }
         .sidebar {
             width: 25%;
             background-color: #35424a;
             color: white;
-            height: 100vh; /* Full-height viewport */
+            height: 100vh;
             padding: 20px;
         }
         .content {
-            width: 75%;
+            flex: 1;
             padding: 20px;
         }
         .profile-pic {
-            width: 100%; /* Responsive width */
-            border-radius: 50%; /* Circular photo */
+            width: 100%;
+            border-radius: 50%;
             margin-bottom: 20px;
         }
         .profile-links a {
             color: white;
             text-decoration: none;
-            display: block; /* Each link on a new line */
+            display: block;
             margin-bottom: 10px;
         }
-        .profile-links a:hover {
+        header {
+            background: darkcyan;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        header a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .sidebar, .content {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
+            header {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <img src="images/IMG_5723.jpg" alt="Saba Kheirinejad" class="profile-pic">
-        <p>I am a mixed-methods human-computer interaction researcher and a fourth-year PhD student at the University of Oulu.</p>
+        <img src="images/photo.jpg" alt="Saba Kheirinejad" class="profile-pic">
+        <p>Human-computer interaction researcher and PhD student.</p>
         <div class="profile-links">
-            <a href="https://https://www.linkedin.com/in/saba-kheirinejad/">LinkedIn</a>
-            <a href="https://scholar.google.com/citations?user=H95bR-0AAAAJ&hl=en">Google Scholar</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://scholar.google.com">Google Scholar</a>
             <a href="https://github.com">GitHub</a>
         </div>
     </div>
     <div class="content">
-        <section class="showcase">
+        <header>
+            <a href="#home">Home</a>
+            <a href="#publications">Publications</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#cv">CV</a>
+        </header>
+        <section id="home">
             <h1>Welcome to My Page</h1>
             <p>More about my projects and research can be found here.</p>
         </section>
+        <!-- Additional sections for publications, portfolio, and CV -->
     </div>
 </body>
 </html>
