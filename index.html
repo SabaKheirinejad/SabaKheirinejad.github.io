@@ -6,12 +6,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Saba Kheirinejad</title>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        html, body {
+            height: 100%; /* Full height */
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
             display: flex;
             flex-direction: column; /* Stack header and main content vertically */
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
             background: #f4f4f4;
         }
         footer {
@@ -19,10 +23,10 @@
             padding: 20px 0;
             background-color: #35424a;
             color: white;
-            position: relative;
+            position: absolute; /* Positioned absolutely relative to the nearest positioned ancestor */
+            bottom: 0;
             width: 100%;
         }
-          
         #home h1 {
             font-size: 36px; /* Increased font size for 'Hi! I'm Saba.' */
             font-weight: bold; /* Makes the text bolder */
@@ -45,39 +49,39 @@
         }
         .main-content {
             display: flex;
-            flex-grow: 1; /* Takes up the remaining space */
+            flex-grow: 1; /* Takes up the remaining space and pushes the footer down */
         }
         .sidebar {
             width: 25%;
             background-color: #f4f4f4;
             color: black;
-            padding-top: 40px; /* Adjust top padding to position the profile picture */
+            padding-top: 40px;
         }
         .sidebar p, .sidebar .profile-links a {
-            margin-left: 110px; /* Aligns with the first header tab */
+            margin-left: 110px;
         }
         .content {
             flex: 1;
             padding: 20px;
         }
         .profile-pic {
-    width: 200px;  /* Same value for width and height */
-    height: 200px; /* Ensures the dimensions are equal and the image is circular */
-    border-radius: 50%; /* Ensures the image corners are fully rounded */
-    margin-bottom: 35px;
-    margin-left: auto; /* This and the next line center the image horizontally */
-    margin-right: auto; /* without specifying the margin as 80px */
-    display: block; /* This ensures margins auto apply correctly, centering the image */
-}
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
         .profile-links a {
             color: black;
             text-decoration: none;
             display: block;
-            margin-left: 30px
+            margin-left: 30px;
             margin-bottom: 30px;
         }
         .profile-links i {
-            margin-right: 5px; /* Adds a small space between the icon and the text */
+            margin-right: 5px;
         }
         @media (max-width: 768px) {
             .main-content {
@@ -99,12 +103,12 @@
     <div class="main-content">
         <div class="sidebar">
             <img src="images/photo.jpg" alt="Saba Kheirinejad" class="profile-pic">
-            <h3>Saba Kheirinejad</h3> <!-- Your name added
+            <h3>Saba Kheirinejad</h3>
             <p>I am a PhD student at the Center for Ubiquitous Computing at the University of Oulu.</p>
             <div class="profile-links">
-             <a href="https://www.linkedin.com/in/saba-kheirinejad/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-             <a href="https://scholar.google.com/citations?user=H95bR-0AAAAJ&hl=en"><i class="fab fa-google"></i> Google Scholar</a>
-             <a href="https://github.com/SabaKheirinejad"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/saba-kheirinejad/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=H95bR-0AAAAJ&hl=en"><i class="fab fa-google"></i> Google Scholar</a>
+                <a href="https://github.com/SabaKheirinejad"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
         <div class="content">
@@ -117,7 +121,7 @@
             <!-- Additional sections for publications, portfolio, and CV -->
         </div>
     </div>
-     <footer>
+    <footer>
         <p>© 2024 Saba Kheirinejad. All rights reserved.</p>
     </footer>
 </body>
