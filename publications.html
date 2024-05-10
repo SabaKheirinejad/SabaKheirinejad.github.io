@@ -4,115 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Ensure your CSS path is correct -->
     <title>Saba Kheirinejad - Publications</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            overflow-x: hidden;
-            font-family: 'Roboto', sans-serif;
-            background: #E8F8F5;
-            color:  #212F3C; /* Dark blue-grey */
-        }
-        .container {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            display: flex;
-            align-items: left;
-            padding: 20px;
-            background: #E8F8F5;
-            margin-left: 50px;
-        }
-        header a {
-            display: inline-block;
-            width: 100%;
-            padding-top: 20px;
-            background: #E8F8F5;
-            color:  #212F3C;
-            margin-right:10px; 
-            font-size: 18px;
-            text-decoration: none;
-        }
-        header a:first-child {
-            margin-left: 0;
-        }
-        footer {
-            width: 100%;
-            padding: 35px 20px;
-            background: #E8F8F5;
-            color: #AEB6BF;
-            text-align: center;
-            align-items: center;
-        }
-        .main-content {
-            display: flex;
-            flex-grow: 1;
-        }
-        .content {
-            flex: 1;
-            padding: 20px;
-            max-width: 800px;
-            text-align: justify;
-            line-height: 1.6;
-            margin-left: 50px;
-        }
-        .sidebar {
-            width: 23%;
-            background-color: #17A589;
-            color:  #212F3C;
-            padding: 35px;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-        }
-        .sidebar h3 {
-            margin-left: 30px;
-        }
-        .sidebar p {
-            text-align: justify;
-            max-width: 200px;
-            line-height: 1.6;
-            margin-left: 30px;
-            padding-top: 0;
-            font-size: 14px;
-        }
-        .profile-pic {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .profile-links a {
-            color: #212F3C;
-            text-decoration: none;
-            display: block;
-            margin-left: 30px;
-            margin-bottom: 20px;
-            font-size: 13px;
-        }
-        .profile-links i {
-            margin-right: 5px;
-        }
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                order: -1;
-            }
-            .container {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -127,4 +20,37 @@
     </div>
     <div class="container">
         <header>
-            <a href="
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="news.html">News</a>
+        </header>
+        <div class="content">
+            <h1>Publications</h1>
+            <section id="journals">
+                <h2>Journals</h2>
+                <p>Details about your published journal articles.</p>
+                <!-- List journal publications here -->
+                <ul>
+                    <li>Article Title 1, Journal Name, Year</li>
+                    <li>Article Title 2, Journal Name, Year</li>
+                    <!-- More journal articles -->
+                </ul>
+            </section>
+            <section id="conferences">
+                <h2>Conferences</h2>
+                <p>Details about your conference publications.</p>
+                <!-- List conference publications here -->
+                <ul>
+                    <li>Paper Title 1, Conference Name, Year</li>
+                    <li>Paper Title 2, Conference Name, Year</li>
+                    <!-- More conference papers -->
+                </ul>
+            </section>
+        </div>
+        <footer>
+            <p>© 2024 Saba Kheirinejad. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
