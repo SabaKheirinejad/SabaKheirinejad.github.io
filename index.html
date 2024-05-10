@@ -21,17 +21,22 @@
             display: flex;
             flex-direction: column;
         }
-        header a {
+        header {
+            display: flex;
+            align-items: left;
+            padding: 20px;  /* Adjusted overall padding */
+            background: #E8F8F5;
+        }
+       header a {
+            display: inline-block;
             width: 100%;
-            padding-top: 35px;  /* Increase this value to move the tabs down */
+            padding-top: 35px;
             background: #E8F8F5;
             color: #0B5345;
-            text-align: left;
             margin-left: 60px;
             font-size: 18px;
-            text-decoration: none; /* Removes underline from links */
+            text-decoration: none;
         }
-
         footer {
             width: 100%;
             padding: 35px 20px;
