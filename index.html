@@ -63,6 +63,7 @@
             margin-left: 50px;
         }
         .sidebar {
+            box-sizing: border-box;  /* Ensures padding and border are inside the width */
             width: 23%;
             height: 100%;
             background-color: #73C6B6;
@@ -107,8 +108,8 @@
                 flex-direction: column;
             }
                .sidebar {
-                width: 100%;
-                order: -1;
+                width: 100%; /* Full width on smaller screens */
+                order: -1; /* Optionally move to the top or bottom */
             }
             .container {
                 width: 100%;
