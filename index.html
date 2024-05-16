@@ -76,16 +76,19 @@
          padding: 5px 0; /* Vertical padding for each list item */
         }
         .sidebar {
-            box-sizing: border-box;  /* Ensures padding and border are inside the width */
+            position: fixed; /* Stick sidebar to the screen */
+            top: 0; /* Align top */
+            left: 0; /* Align left */
             width: 23%;
-            height: 100%;
-            background-color: #73C6B6;
+            height: 100vh; /* Ensures at least viewport height */
+            background-color:#73C6B6 ;
             color:  #212F3C;
-            padding: 35px;
-            display: flex;
+            /*  display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: start; */
+            overflow-y: auto; /* Enable scrolling within sidebar */
         }
+        
          .sidebar h3 {
             margin-left: 30px;
         }
