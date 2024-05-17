@@ -47,12 +47,13 @@
             margin-left: 0;
         }
         footer {
-         width: 800px;  /* Set the footer width to match the content width */
+         width: 77%; /* Keep the footer at full width */
          padding: 35px 20px;
          background: #E8F8F5;
          color: #AEB6BF;
          text-align: center;
-         margin: 0 auto;  /* Centers the footer */
+         position: relative; /* Relative positioning to adjust the left offset */
+         left: calc((77% - 800px) / 2); /* This will center the footer text under your content */
 }
         .main-content {
             display: flex;
