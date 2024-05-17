@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Saba Kheirinejad - portfolio</title>
+    <style>
+        html, body {
+            width:100%;
+            height:100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+            background: #E8F8F5 ;
+            color:  #212F3C; /*#0B5345 #148F77*/
+        }
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+            align-items: left;
+            padding: 20px;  /* Adjusted overall padding */
+            background: #E8F8F5;
+            margin-left: 30%;
+        }
+       header a {
+            display: inline-block;
+            width: 100%;
+            padding-top: 20px;
+            background: #E8F8F5;
+            color:  #212F3C;
+            margin-right:10px; 
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        header a:first-child {
+            margin-left: 0;
+        }
+        footer {
+    width: 77%; /* The footer occupies the remaining 77% of the width, after the sidebar */
+    padding: 35px 20px;
+    background: #E8F8F5;
+    color: #AEB6BF;
+    text-align: center;
+    left: 23%; /* Starts after the sidebar which is 23% of the full width */
+    right: 0; /* Ensures the footer extends to the end of the container */
+    margin-left: calc((77% - 800px) / 2); /* Centers the text by adjusting the left margin within the 77% area */
+}
+
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+            margin-left: 30%; 
+        }
+        .content section {
+           max-width: 800px;
+           padding-bottom: 20px; /* Padding below each section content */
+           margin-bottom: 15px; /* Space below the divider line */
+        }
+        .content ul {
+          list-style-type: decimal; /* Numerate items */ /*none;  No bullets */
+          padding: 0; /* Reset padding */
+        }
+
+        .content li {
+         padding: 5px 0; /* Vertical padding for each list item */
+        }
+
+        .content h2 {
+        border-bottom: 2px solid #E59866; /* Color and thickness of the border */
+        padding-bottom: 10px; /* Space between the text and the border */
+        margin-bottom: 20px; /* Space below the border before the list starts */
+}
+        .sidebar {
+            position: fixed; /* Stick sidebar to the screen */
+            top: 0; /* Align top */
+            left: 0; /* Align left */
+            width: 23%;
+            height: 100vh; /* Ensures at least viewport height */
+            background-color:#16A085;
+            color:  #212F3C;
+            /*  display: flex;
+            flex-direction: column;
+            justify-content: start; */
+            overflow-y: auto; /* Enable scrolling within sidebar */
+        }
+         .sidebar h3 {
+            margin-left: 60px;
+            font-size: 22px;
+        }
+        .sidebar p {
+            text-align: justify;
+            max-width: 200px; /* Limit the width for better readability */
+            line-height: 1.6;
+            margin-left: 60px;
+            padding-top: 0;
+            font-size: 16px;
+        }
+
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            margin-bottom: 20px;  
+            margin-left: 60px;
+            margin-top: 30px;
+            margin-right: auto;
+        }
+        .profile-links a {
+            color: #212F3C;
+            text-decoration: none;
+            display: block;
+            margin-left:60px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+             font-size: 14px;
+
+        }
+        .profile-links i {
+            margin-right: 5px;
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                order: -1;
+            }
+            .container {
+               height: 100%; /* Makes container take full height */
+               width: 100%; /* Makes container take full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="images/photo.jpg" alt="Saba Kheirinejad" class="profile-pic">
+        <h3>Saba Kheirinejad</h3>
+        <p>PhD student at the Center for Ubiquitous Computing at the University of Oulu researching Mobile Health (mHealth)</p>
+        <div class="profile-links">
+            <a href="https://www.linkedin.com/in/saba-kheirinejad/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=H95bR-0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <a href="https://github.com/SabaKheirinejad"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <a href="index.html">Home</a>
+            <a href="publications.html" class="active">Publications</a>
+            <!--<a href="#portfolio">Portfolio</a>
+            <a href="#news">News</a> -->
+        </header>
+        <div class="content">
+            <h1>Publications</h1>
+            <section id="journals">
+                <h2>Journal papers</h2>
+                <ul>
+                    <li>  <strong>Kheirinejad Saba</strong>, Aku Visuri, Sharadhi Alape Suryanarayana, and Simo Hosio. "Exploring mHealth Applications for
+                        Self-Management of Chronic Low Back Pain: A Survey of Features and Benefits." Heliyon journal, 2023.</li>
+                    <li>  <strong>Kheirinejad Saba</strong>, Aku Visuri, Denzil Ferreira, and Simo Hosio. 
+                    "Leave Your Smartphone Out of Bed”: Quantitative Analysis of Smartphone Use on Sleep Quality." 
+                    Personal and Ubiquitous Computing Journal, 2023. </li>
+                    <li> <strong>Kheirinejad Saba</strong>, Andy Alorwu, Aku Visuri, and Simo Hosio.
+                    "Contrasting the Expectations and Experiences Related to Mobile Health Use for Chronic Pain: Questionnaire Study." 
+                    JMIR Human Factors 9, no. 3 (2022): e38265.</li>
+                    <li> <strong>Kheirinejad Saba</strong>, Noushin Riahi, and Reza Azmi. "Text-Based Traffic Panels Detection using the Tiny YOLOv3 Algorithm." 
+                    Journal of Engineering Research and Sciences, vol. 1, no. 3, pp. 68-80 (2022).</li
+                </ul>
+            </section>
+            <section id="conferences">
+                <h2>Conference papers</h2>
+                <ul>
+                    <li> Haliburton Luke, <strong>Saba Kheirinejad</strong>, Albrecht Schmidt, and Sven Mayer. 
+                        "Exploring Smart Standing Desks to Foster a Healthier Workplace." IMWUT'23.</li>
+                     <li> Kiarostami Sina, Ville Paananen, Lik Hang Lee, Aku Visuri, <strong>Saba Kheirinejad</strong>, and Simo Hosio.
+                        "Exploring Situated Empathy through a Metaverse Campus." Academic MT23.</li>
+                    <li> Alorwu, Andy, <strong>Saba Kheirinejad</strong>, Niels Van Berkel, Marianne Kinnula, Denzil Ferreira, Aku Visuri, and Simo Hosio.
+                    "Assessing MyData Scenarios: Ethics, Concerns, and the Promise." 
+                        In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, pp. 1-11. 2021.</li>
+                    <li>Kuosmanen Elina, Aku Visuri, <strong>Saba Kheirinejad</strong>, Niles v. Berkel, Heli Koskimäki, Denzil Ferreira, Simo Hosio. 
+                    "How Does Sleep Tracking Influence Your Life? Experiences from a Longitudinal Field Study with a Wearable Ring'', 
+                        MobileHCI ’22, Sep 28–Oct 1, 2022, Vancouver, Canada. "Best Paper Honorable Mention Award". </li>
+                    <li> <strong>Kheirinejad Saba</strong>, Noushin Riaihi, and Reza Azmi.
+                    "Persian Text Based Traffic Sign Detection with Convolutional Neural Network: A New Dataset." 
+                    In 2020 10th International Conference on Computer and Knowledge Engineering (ICCKE), pp. 060-064. IEEE, 2020.</li>
+                    <li> <strong>Kheirinejad Saba</strong>, Seyed Mohammad Hossein Hasheminejad, and Nooshin Riahi. 
+                    "Max-min ant colony optimization method for edge detection exploiting a new heuristic information function."
+                    In 2018 8th International Conference on Computer and Knowledge Engineering (ICCKE), pp. 12-15. IEEE, 2018.</li>
+                </ul>
+            </section>
+            <section id="preprint">
+                <h2>Preprints and  under review papers</h2>
+                <ul>
+                    <li> Lei Kehua, <strong>Saba Kheirinejad</strong>, Namrata Keskar, David T. Lee, Shivani Potnuru, and Simo Hosio.
+                         "Exploring Communal Gratitude in Online Communities." Under revsion at CSCW'2024. </li>
+                    <li> <strong>Kheirinejad Saba</strong>, Junhao Lee, Aku Visuri, David Lee, Steven Dow, Shixian Geng, Koji Yatani, and Simo Hosio.
+                       "Understanding Perspectives on the Potential Roles of Chatbots in Online
+                        Synchronous Health Discussions" Submitted to Journal of Interacting with Computers.  </li>
+                    <li>  M. Torres-Mendoza David, <strong>Saba Kheirinejad</strong>, Mustafa Ajmal, Ashwin Chembu, Dustin Palea, Jim Whitehead, and David T. Lee. 
+                         "Evaluating Exploratory Reading Groups for Supporting Undergraduate Research Pipelines in Computing." Submitted to ICER 2024.</li>
+                    <li>  Kiarostami Sina, Ville Paananen, Lik Hang Lee, Aku Visuri, <strong>Saba Kheirinejad</strong>, and Simo Hosio.
+                         "We are Oulu: Communicating Hardship Stories of Immigrants and Promoting Situated Empathy in a Virtual Reality Campus."
+                          Submitted to Virtual Reality Journal. </li>
+                    <li>  <strong>Kheirinejad Saba</strong> and Simo Hosio. "The Impact of Emotional Awareness in AI-Driven Chatbots on Human Interaction."
+                        Under preparation. </li>   
+                </ul>
+            </section> 
+        </div>
+        <footer>
+            <p>© 2024 Saba Kheirinejad. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
