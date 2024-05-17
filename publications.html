@@ -47,14 +47,16 @@
             margin-left: 0;
         }
         footer {
-         width: 77%; /* Keep the footer at full width */
-         padding: 35px 20px;
-         background: #E8F8F5;
-         color: #AEB6BF;
-         text-align: center;
-         position: relative; /* Relative positioning to adjust the left offset */
-         left: calc((77% - 800px) / 2); /* This will center the footer text under your content */
+    width: 77%; /* The footer occupies the remaining 77% of the width, after the sidebar */
+    padding: 35px 20px;
+    background: #E8F8F5;
+    color: #AEB6BF;
+    text-align: center;
+    left: 23%; /* Starts after the sidebar which is 23% of the full width */
+    right: 0; /* Ensures the footer extends to the end of the container */
+    margin-left: calc((77% - 800px) / 2); /* Centers the text by adjusting the left margin within the 77% area */
 }
+
         .main-content {
             display: flex;
             flex-grow: 1;
