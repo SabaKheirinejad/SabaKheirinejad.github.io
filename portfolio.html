@@ -1,10 +1,10 @@
-ts<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Saba Kheirinejad - portfolio</title>
+    <title>Saba Kheirinejad - projects</title>
     <style>
         html, body {
             width:100%;
@@ -73,57 +73,19 @@ ts<!DOCTYPE html>
            padding-bottom: 20px; /* Padding below each section content */
            margin-bottom: 15px; /* Space below the divider line */
         }
+        .content ul {
+          list-style-type: decimal; /* Numerate items */ /*none;  No bullets */
+          padding: 0; /* Reset padding */
+        }
 
-.content ul {
-    list-style-type: decimal; /* Numerate items */
-    border: 1px solid white; /* Border */
-    padding: 10px; /* Adds space between the text and the border */
-    background: white; /* Background color */
-    margin-top: 0; /* No margin on top */
-}
-
-.abstract-content {
-    display: flex; /* Enables flexbox */
-    border: 2px solid white; /* Your existing border */
-    padding: 10px;
-    box-sizing: border-box; /* Ensures padding doesn't exceed container width */
-}
-
-.text-content {
-    width: 50%; /* 2/3 of the width for the text */
-    padding-right: 10px; /* Space between text and image */
-}
-
-.image-content {
-    width: 50%; /* 1/2 of the width for the image */
-    display: flex; /* Flex to allow centering */
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
-}
-
-.image-content img {
-    width: 100%; /* Makes the image fit its container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 100%; /* Ensures the image doesn’t exceed the container */
-    object-fit: contain; /* Ensures image scales without distortion */
-}
-           .content li {
+        .content li {
          padding: 5px 0; /* Vertical padding for each list item */
         }
 
-        .content h1 {
+        .content h2 {
         border-bottom: 4px solid #F1C40F; /* Color and thickness of the border */
         padding-bottom: 10px; /* Space between the text and the border */
         margin-bottom: 20px; /* Space below the border before the list starts */
-}
-        .content h2 {
-        color: #058970; /* or any other color */
-        font-weight: bold;
-        font-size: 20px;
-        border: 1px solid white; /* sets a 2px solid black border */
-        padding: 10px; /* optional, adds space between the text and the border */
-        background: white; /* sets the background color inside the border to white */
-        margin-bottom: 0
 }
         .sidebar {
             position: fixed; /* Stick sidebar to the screen */
@@ -173,11 +135,10 @@ ts<!DOCTYPE html>
         .profile-links i {
             margin-right: 5px;
         }
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
             body {
                 flex-direction: column;
             }
-}
             .sidebar {
                 width: 100%;
                 order: -1;
@@ -193,7 +154,7 @@ ts<!DOCTYPE html>
     <div class="sidebar">
         <img src="images/photo.jpg" alt="Saba Kheirinejad" class="profile-pic">
         <h3>Saba Kheirinejad</h3>
-        <p>PhD student at the Center for Ubiquitous Computing at the University of Oulu researching Mobile Health (mHealth)</p>
+        <p>PhD student at the Center for Ubiquitous Computing at the University of Oulu researching Human-Computer Interaction and Mobile Health</p>
         <div class="profile-links">
             <a href="https://www.linkedin.com/in/saba-kheirinejad/"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="https://scholar.google.com/citations?user=H95bR-0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
@@ -204,33 +165,29 @@ ts<!DOCTYPE html>
         <header>
             <a href="index.html">Home</a>
             <a href="publications.html">Publications</a>
-            <a href="portfolio.html" class="active">Projects</a>
-            <!--<a href="#portfolio">Portfolio</a>
-            <a href="#news">News</a> -->
+             <a href="portfolio.html" class="active">Projects</a>
+           
         </header>
         <div class="content">
-            <h1>Selected Projects</h1>
-            <h2>“Leave your smartphone out of bed”: quantitative analysis of smartphone use effect on sleep quality</h2>
-            <div class="abstract-content">
-                 <div class="text-content">
-            <strong>ABSTRACT</strong> Smartphones have become an integral part of people’s everyday lives. Smartphones are used across all household locations,
-including in bed at night. Smartphone screens and other displays emit blue light, and exposure to blue light can
-affect one’s sleep quality. Thus, smartphone use before bedtime could disrupt the quality of one’s sleep, but research lacks
-quantitative studies on how smartphone use can influence sleep. This study combines smartphone applications use data from
-75 participants with sleep data collected by a wearable ring. On average, the participants used their smartphones in bed for
-322.8 s (5 min and 22.8 s), with an IQR of 43.7–456. Participants spent an average of 42% of their time in bed using their
-smartphones (IQR of 5.87–55.5%). Our findings indicate that smartphone use in bed has significant adverse effects on sleep
-latency, awake time, average heart rate, and HR variability. We also find that smartphone use does not decrease sleep quality
-when used outside of bed. Our results indicate that intense smartphone use alone does not negatively affect well-being. Since
-all smartphone users do not use their phones in the same way, extending the investigation to different smartphone use types
-might yield more information than general smartphone use. In conclusion, this paper presents the first investigation of the
-association between smartphone application use logs and detailed sleep metrics. Our work also validates previous research
-results and highlights emerging future work.
-                </div>
-                <div class="image-content">
-                   <img src="images/Oura.JPG" alt="">
-                </div>
-             </div>
+            <h1>Publications</h1>
+        <section id="conferences">
+                <h2>Conference papers</h2>
+                <ul>
+                   
+                </ul>
+            </section>
+            <section id="journals">
+                <h2>Journal papers</h2>
+                <ul>
+                   
+                </ul>
+            </section>
+            <section id="preprint">
+                <h2>Preprints and  under review papers</h2>
+                <ul>
+                   
+                </ul>
+            </section> 
         </div>
         <footer>
             <p>© 2024 Saba Kheirinejad. All rights reserved.</p>
