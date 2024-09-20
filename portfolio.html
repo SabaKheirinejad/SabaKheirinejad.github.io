@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,216 +7,132 @@
     <title>Saba Kheirinejad - projects</title>
     <style>
         html, body {
-            width:100%;
-            height:100%;
+            width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0;
             display: flex;
             overflow-x: hidden;
             font-family: 'Roboto', sans-serif;
-            background: #E8F8F5 ;
-            color:  #212F3C; /*#0B5345 #148F77*/
+            background: #E8F8F5;
+            color:  #212F3C;
         }
+
         .container {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
+            padding-left: 23%; /* Account for sidebar */
         }
+
         header {
             display: flex;
             align-items: center;
-            padding: 20px;  /* Adjusted overall padding */
+            padding: 20px;
             background: #E8F8F5;
-            margin-left: 30%;
+            padding-left: 23%; /* Align header after sidebar */
         }
-       header a {
-            display: inline-block;
-            padding-top: 20px;
-            background: #E8F8F5;
-            color:  #212F3C;
-            margin-right:50px; 
-            font-size: 18px;
-            text-decoration: none;
-        }
-        .active {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        header a:first-child {
-            margin-left: 0;
-        }
-        footer {
-    width: 77%; /* The footer occupies the remaining 77% of the width, after the sidebar */
-    padding: 35px 20px;
-    background: #E8F8F5;
-    color: #AEB6BF;
-    text-align: center;
-    left: 23%; /* Starts after the sidebar which is 23% of the full width */
-    right: 0; /* Ensures the footer extends to the end of the container */
-    margin-left: calc((77% - 800px) / 2); /* Centers the text by adjusting the left margin within the 77% area */
-}
 
-        .main-content {
-            display: flex;
-            flex-grow: 1;
-        }
         .content {
             flex: 1;
             padding: 20px;
-            max-width: 800px;
             text-align: justify;
             line-height: 1.6;
-            margin-left: 30%; 
+            padding-left: 23%; /* Account for sidebar */
+            max-width: 1000px; /* Optional: Control max width */
         }
-        .content section {
-           max-width: 800px;
-           padding-bottom: 20px; /* Padding below each section content */
-           margin-bottom: 15px; /* Space below the divider line */
-        }
-        .content ul {
-          list-style-type: decimal; /* Numerate items */ /*none;  No bullets */
-          padding: 0; /* Reset padding */
-        }
-
-        .content li {
-         padding: 5px 0; /* Vertical padding for each list item */
-        }
-        .content h1 {
-        border-bottom: 4px solid #F1C40F; /* Color and thickness of the border */
-        padding-bottom: 10px; /* Space between the text and the border */
-        margin-bottom: 20px; /* Space below the border before the list starts */
-}
-
-    .project {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 30px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-.project-header h2 {
-    color: #00A7E1; /* Similar blue as in the screenshot */
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.project-author {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.project-links {
-    display: flex;
-    gap: 15px;
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #058970; /* Link color */
-}
-
-.project-links a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-}
-
-.project-links a::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-color: #00A7E1; /* Use icons or emoji */
-    margin-right: 10px;
-    border-radius: 50%;
-}
-
-.project-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.project-abstract {
-    flex: 1;
-    max-width: 60%; /* Ensure abstract takes most of the space */
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.project-image {
-    flex: 0 0 35%; /* Image takes 35% of the space */
-    margin-left: 20px;
-}
-
-.project-image img {
-    max-width: 100%;
-    height: auto;
-}
 
         .sidebar {
             position: fixed; /* Stick sidebar to the screen */
-            top: 0; /* Align top */
-            left: 0; /* Align left */
+            top: 0;
+            left: 0;
             width: 23%;
             height: 100vh; /* Ensures at least viewport height */
-            background-color:#16A085;
-            color:  #212F3C;
-            /*  display: flex;
-            flex-direction: column;
-            justify-content: start; */
-            overflow-y: auto; /* Enable scrolling within sidebar */
+            background-color: #16A085;
+            color: #212F3C;
+            overflow-y: auto;
         }
-         .sidebar h3 {
+
+        .sidebar h3, .sidebar p, .profile-pic, .profile-links {
             margin-left: 60px;
+        }
+
+        .project {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-header h2 {
+            color: #00A7E1;
+            font-weight: bold;
             font-size: 22px;
         }
-        .sidebar p {
-            text-align: justify;
-            max-width: 200px; /* Limit the width for better readability */
-            line-height: 1.6;
-            margin-left: 60px;
-            padding-top: 0;
+
+        .project-author {
             font-size: 16px;
-        }
-
-        .profile-pic {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            margin-bottom: 20px;  
-            margin-left: 60px;
-            margin-top: 30px;
-            margin-right: auto;
-        }
-        .profile-links a {
-            color: #212F3C;
-            text-decoration: none;
-            display: block;
-            margin-left:60px;
-            margin-top: 30px;
+            color: #333;
             margin-bottom: 20px;
-             font-size: 14px;
+        }
 
+        .project-links {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #058970;
         }
-        .profile-links i {
-            margin-right: 5px;
+
+        .project-links a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
         }
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                order: -1;
-            }
-            .container {
-               height: 100%; /* Makes container take full height */
-               width: 100%; /* Makes container take full width */
-            }
+
+        .project-links a::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #00A7E1;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .project-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .project-abstract {
+            flex: 1;
+            max-width: 60%;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .project-image {
+            flex: 0 0 35%;
+            margin-left: 20px;
+        }
+
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            width: 100%;
+            padding: 35px 20px;
+            background: #E8F8F5;
+            color: #AEB6BF;
+            text-align: center;
         }
     </style>
 </head>
@@ -231,49 +147,45 @@
             <a href="https://github.com/SabaKheirinejad"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </div>
+
     <div class="container">
         <header>
             <a href="index.html">Home</a>
             <a href="publications.html">Publications</a>
-             <a href="portfolio.html" class="active">Projects</a>
-           
+            <a href="portfolio.html" class="active">Projects</a>
         </header>
-      <div class="content">
-    <h1>Selected Projects</h1>
-    
-    <!-- Project 1 -->
-    <div class="project">
-        <!-- Project Title and Authors -->
-        <div class="project-header">
-            <h2>Developing a Personality Model for Speech-based Conversational Agents Using the Psycholexical Approach</h2>
-            <div class="project-author">
-                <strong>Authors:</strong> Sarah Theres Völkel, Ramona Schoedel, Daniel Buschek, Clemens Stachl, Verena Winterhalter, Markus Bühner, and Heinrich Hussmann.<br>
-                <strong>Published in:</strong> CHI '20
+
+        <div class="content">
+            <h1>Selected Projects</h1>
+            
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-header">
+                    <h2>Developing a Personality Model for Speech-based Conversational Agents Using the Psycholexical Approach</h2>
+                    <div class="project-author">
+                        <strong>Authors:</strong> Sarah Theres Völkel, Ramona Schoedel, Daniel Buschek, Clemens Stachl, Verena Winterhalter, Markus Bühner, and Heinrich Hussmann.<br>
+                        <strong>Published in:</strong> CHI '20
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#">PDF</a> |
+                    <a href="#">DOI</a> |
+                    <a href="#">Cite</a> |
+                    <a href="#">Video</a>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-abstract">
+                        <strong>Abstract:</strong> We present the first systematic analysis of personality dimensions developed specifically to describe the personality of speech-based conversational agents...
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Oura.JPG" alt="Project Image">
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- Links (PDF, DOI, Cite, Video) -->
-        <div class="project-links">
-            <a href="#">PDF</a> |
-            <a href="#">DOI</a> |
-            <a href="#">Cite</a> |
-            <a href="#">Video</a>
-        </div>
-        
-        <!-- Abstract and Image Side-by-Side -->
-        <div class="project-content">
-            <div class="project-abstract">
-                <strong>Abstract:</strong> We present the first systematic analysis of personality dimensions developed specifically to describe the personality of speech-based conversational agents. 
-                <!-- Abstract content continues here... -->
-            </div>
-            <div class="project-image">
-                <img src="images/Oura.JPG" alt="Project Image">
-            </div>
-        </div>
-    </div>
-</div>
-           
-        </div>
+
         <footer>
             <p>© 2024 Saba Kheirinejad. All rights reserved.</p>
         </footer>
