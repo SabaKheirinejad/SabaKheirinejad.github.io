@@ -87,25 +87,29 @@
         margin-bottom: 20px; /* Space below the border before the list starts */
 }
 
-        .project-content {
-         display: flex;
-         flex-direction: row; /* Ensure the content is aligned in a row */
-         margin-top: 20px;
+     .project-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow the content to wrap */
+    margin-top: 20px;
 }
 
-        .project-abstract {
-        flex: 1; /* Allow the abstract to take up remaining space */
-        padding-right: 20px; /* Space between text and image */
+.project-abstract {
+    flex: 1 1 100%; /* Take up the full width when wrapping */
+    order: 2; /* Ensure abstract text appears first when wrapping */
 }
 
-       .project-image {
-       flex: 0 0 50%; /* Allow the image to take 50% of the width */
+.project-image {
+    flex: 0 0 200px; /* Set the image to a fixed width */
+    height: auto;
+    margin-left: 20px; /* Space between image and text */
+    order: 1; /* Ensure image is positioned first */
 }
 
-       .project-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
 }
 
         .sidebar {
