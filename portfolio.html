@@ -83,35 +83,30 @@ ts<!DOCTYPE html>
 }
 
 .abstract-content {
-    display: flex;
+    display: flex; /* Enables flexbox */
     border: 2px solid white; /* Your existing border */
     padding: 10px;
     box-sizing: border-box; /* Ensures padding doesn't exceed container width */
-    flex-wrap: wrap; /* Allows content to wrap as needed */
 }
 
 .text-content {
-    flex: 1 1 50%; /* Flex-basis of 50% (starts taking 50% width) */
+    width: 50%; /* 2/3 of the width for the text */
     padding-right: 10px; /* Space between text and image */
-    box-sizing: border-box;
 }
 
 .image-content {
-    flex: 1 1 50%; /* Flex-basis of 50% (starts taking 50% width) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    width: 50%; /* 1/3 of the width for the image */
+    display: flex; /* Flex to allow centering */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
 }
 
 .image-content img {
-    width: 100%; /* Image fits its container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensures the image doesn’t exceed its container */
+    width: 100%; /* Makes the image fit its container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures the image doesn’t exceed the container */
     object-fit: contain; /* Ensures image scales without distortion */
 }
-
-
            .content li {
          padding: 5px 0; /* Vertical padding for each list item */
         }
