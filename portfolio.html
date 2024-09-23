@@ -22,7 +22,7 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            padding-left: 23%; /* Account for sidebar */
+            /*padding-left: 23%; /* Account for sidebar */ */
         }
 
         header {
@@ -30,7 +30,37 @@
             align-items: center;
             padding: 20px;
             background: #E8F8F5;
-            padding-left: 23%; /* Align header after sidebar */
+            margin-left: 30%;
+        }
+         header a {
+            display: inline-block;
+            padding-top: 20px;
+            background: #E8F8F5;
+            color:  #212F3C;
+            margin-right:50px; 
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        header a:first-child {
+            margin-left: 0;
+        }
+        footer {
+    width: 77%; /* The footer occupies the remaining 77% of the width, after the sidebar */
+    padding: 35px 20px;
+    background: #E8F8F5;
+    color: #AEB6BF;
+    text-align: center;
+    left: 23%; /* Starts after the sidebar which is 23% of the full width */
+    right: 0; /* Ensures the footer extends to the end of the container */
+    margin-left: calc((77% - 800px) / 2); /* Centers the text by adjusting the left margin within the 77% area */
+}
+        .main-content {
+            display: flex;
+            flex-grow: 1;
         }
 
         .content {
