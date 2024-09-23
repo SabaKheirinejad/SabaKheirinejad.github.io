@@ -66,27 +66,66 @@
         .content {
             flex: 1;
             padding: 20px;
+            max-width: 800px;
             text-align: justify;
             line-height: 1.6;
-            padding-left: 23%; /* Account for sidebar */
-            max-width: 1000px; /* Optional: Control max width */
+            padding-left: 30%; /* Account for sidebar */
+        }
+         .content section {
+           max-width: 800px;
+           padding-bottom: 20px; /* Padding below each section content */
+           margin-bottom: 15px; /* Space below the divider line */
         }
 
-        .sidebar {
+       .sidebar {
             position: fixed; /* Stick sidebar to the screen */
-            top: 0;
-            left: 0;
+            top: 0; /* Align top */
+            left: 0; /* Align left */
             width: 23%;
             height: 100vh; /* Ensures at least viewport height */
-            background-color: #16A085;
-            color: #212F3C;
-            overflow-y: auto;
+            background-color:#16A085;
+            color:  #212F3C;
+            /*  display: flex;
+            flex-direction: column;
+            justify-content: start; */
+            overflow-y: auto; /* Enable scrolling within sidebar */
         }
-
-        .sidebar h3, .sidebar p, .profile-pic, .profile-links {
+         .sidebar h3 {
             margin-left: 60px;
+            font-size: 22px;
+        }
+        .sidebar p {
+            text-align: justify;
+            max-width: 200px; /* Limit the width for better readability */
+            line-height: 1.6;
+            margin-left: 60px;
+            padding-top: 0;
+            font-size: 16px;
         }
 
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            margin-bottom: 20px;  
+            margin-left: 60px;
+            margin-top: 30px;
+            margin-right: auto;
+        }
+        .profile-links a {
+            color: #212F3C;
+            text-decoration: none;
+            display: block;
+            margin-left:60px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+             font-size: 14px;
+
+        }
+        .profile-links i {
+            margin-right: 5px;
+        }
+        
         .project {
             border: 1px solid #ccc;
             padding: 20px;
@@ -157,13 +196,6 @@
             height: auto;
         }
 
-        footer {
-            width: 100%;
-            padding: 35px 20px;
-            background: #E8F8F5;
-            color: #AEB6BF;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
