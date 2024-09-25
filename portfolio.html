@@ -153,7 +153,7 @@
             left: 4px;
             top: 20px;
             bottom: 20px;
-            width: 8px; /* Vertical line thickness */
+            width: 9px; /* Vertical line thickness */
             background-color: #16A085; /* Line color */
 }
         .project-author {
@@ -186,14 +186,15 @@
     margin-right: 8px; /* Spacing between icon and text */
 }
 
-/* DOI icon (e.g., using book icon or a similar icon) */
 .project-links a.doi::before {
-    content: "\f02d"; /* Font Awesome DOI or similar icon */
+    content: "\f0c1"; /* Font Awesome chain link icon */
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 8px;
+    font-weight: 900; /* Required for solid icons */
+    color: #16A085; /* Matches your color scheme */
+    margin-right: 8px; /* Adjust spacing */
+    font-size: 18px; /* Adjust size as needed */
 }
-
+        
 /* Cite icon using quotation mark from Font Awesome */
 .project-links a.cite::before {
     content: "\f10e"; /* Font Awesome quotation mark icon */
