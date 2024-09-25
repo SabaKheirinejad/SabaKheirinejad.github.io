@@ -135,11 +135,20 @@
             display: flex;
             flex-direction: column;
         }
-
+        .project-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px; /* Vertical line thickness */
+    background-color: #16A085; /* Line color */
+}
           .project-header h2 {
             font-weight: 700; /* 700 is the numeric value for bold */
             font-size: 18px;
             margin-bottom: 15px; /* Adjust the value for the desired spacing */
+            padding-left: 20px;
             color: #16A085;
          }
 
