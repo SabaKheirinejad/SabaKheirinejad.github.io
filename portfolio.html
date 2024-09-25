@@ -178,15 +178,29 @@
             align-items: center;
         }
 
-        .project-links a::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background-color:#16A085;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
+     /* PDF icon */
+.project-links a.pdf::before {
+    content: "\f1c1"; /* Font Awesome PDF icon */
+    font-family: "Font Awesome 5 Free"; /* Ensure it's using Font Awesome */
+    font-weight: 900; /* Required for solid icons */
+    margin-right: 8px; /* Spacing between icon and text */
+}
+
+/* DOI icon (e.g., using book icon or a similar icon) */
+.project-links a.doi::before {
+    content: "\f02d"; /* Font Awesome DOI or similar icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+/* Cite icon */
+.project-links a.cite::before {
+    content: "\f02e"; /* Font Awesome book icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+}
 
         .project-content {
             display: flex;
@@ -260,9 +274,9 @@
                 </div>
 
                 <div class="project-links">
-                    <a href="https://link.springer.com/content/pdf/10.1007/s00779-022-01694-w.pdf">PDF</a> |
-                    <a href="https://doi.org/10.1007/s00779-022-01694-w">DOI</a> |
-                    <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:oTVtn7C_qEAJ:scholar.google.com/&output=citation&scisdr=ClH5t8ObEI_2ikQGYM4:AFWwaeYAAAAAZvIAeM4-wFCNZJUOTKjA6dmIo8M&scisig=AFWwaeYAAAAAZvIAeF_zDDiQLIhMwUbHT6-1wTM&scisf=4&ct=citation&cd=-1&hl=en">Cite</a> |
+                    <a href="https://link.springer.com/content/pdf/10.1007/s00779-022-01694-w.pdf" class="pdf">PDF</a> |
+                    <a href="https://doi.org/10.1007/s00779-022-01694-w"class="doi">DOI</a> |
+                    <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:oTVtn7C_qEAJ:scholar.google.com/&output=citation&scisdr=ClH5t8ObEI_2ikQGYM4:AFWwaeYAAAAAZvIAeM4-wFCNZJUOTKjA6dmIo8M&scisig=AFWwaeYAAAAAZvIAeF_zDDiQLIhMwUbHT6-1wTM&scisf=4&ct=citation&cd=-1&hl=en"class="cite">CITE</a> |
                 </div>
 
                 <div class="project-content">
