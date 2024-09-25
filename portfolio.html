@@ -210,6 +210,18 @@
             max-width: 100%;
             height: auto;
         }
+        /* Full width for the text when the image is not present or ends */
+@media (max-width: 768px) {
+       .project-abstract {
+           flex: 1 1 100%; /* Text takes 100% width on small screens or after wrapping */
+           max-width: 100%;
+    }
+
+      .project-image {
+          flex: 1 1 100%; /* Image also takes full width on small screens */
+          margin-left: 0;
+    }
+}
 
     </style>
 </head>
