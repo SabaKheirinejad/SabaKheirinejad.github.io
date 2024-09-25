@@ -194,12 +194,14 @@
     margin-right: 8px;
 }
 
-/* Cite icon */
+/* Cite icon using quotation mark from Font Awesome */
 .project-links a.cite::before {
-    content: "\f02e"; /* Font Awesome book icon */
+    content: "\f10e"; /* Font Awesome quotation mark icon */
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 8px;
+    font-weight: 900; /* Required for solid icons */
+    color: #16A085; /* Use your preferred color */
+    font-size: 20px; /* Adjust size as necessary */
+    margin-right: 8px; /* Space between icon and text */
 }
 
         .project-content {
