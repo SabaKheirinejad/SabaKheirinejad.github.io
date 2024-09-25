@@ -85,7 +85,7 @@
             height: 100vh; /* Ensures at least viewport height */
             background-color:#16A085;
             color:  #212F3C;
-            /*  display: flex;
+            /* display: flex;
             flex-direction: column;
             justify-content: start; */
             overflow-y: auto; /* Enable scrolling within sidebar */
@@ -191,7 +191,7 @@
             flex-wrap: wrap; /* Allows content to wrap when needed */
             justify-content: space-between;
             margin-bottom: 20px;
-            align-items: flex-start; /* Ensures image and text align at the top */
+            align-items: stretch; /* Ensure both text and image take the full height of the container */
         }
 
         .project-abstract {
@@ -204,7 +204,7 @@
 
         .project-image {
             flex: 0 0 50%;
-            margin-left: 20px;
+            margin-left: 0;
         }
 
         .project-image img {
@@ -216,6 +216,10 @@
        .project-abstract {
            flex: 1 1 100%; /* Text takes 100% width on small screens or after wrapping */
            max-width: 100%;
+    }
+    .project-image {
+        flex: 1 1 100%; /* Image also takes full width on small screens */
+        margin-left: 0;
     }
 }
 
