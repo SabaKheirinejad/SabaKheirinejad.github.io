@@ -218,14 +218,6 @@
             align-items: flex-start; /* Aligns items at the top */
         }
 
-        .project-abstract {
-            flex: 1 1 40%; /* Takes 40% width when image is present */
-            max-width: 40%; /* Ensures it doesn't exceed 50% when the image is present */
-            font-size: 14px;
-            line-height: 1.5;
-            font-weight: normal; /* This ensures the text is not bold */
-        }
-
         .project-image {
             flex: 1 1 60%;
             max-width: 60%; /* Prevents exceeding 60% */
@@ -237,25 +229,37 @@
             height: auto;
         }
 
+        .project-abstract {
+            flex: 1 1 40%; /* Takes 40% width when image is present */
+            max-width: 40%; /* Ensures it doesn't exceed 40% when the image is present */
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: normal; /* This ensures the text is not bold */
+        }
+
          project-content-wrap {
              display: block; /* Allows wrapping for text below the image */
         }
 
         /* Full width for the text after the image ends */
-        .project-image + .project-abstract {
+       .project-content-wrap .project-image + .project-abstract {
             flex: 1 1 100%; /* Text takes 100% width when wrapping */
             max-width: 100%;
-        }
+}
+
         
         /* Full width for the text when the image is not present or ends */
        @media (max-width: 768px) {
-
+       .project-content {
+            flex-direction: column; /* Stacks image and text vertically */
+    }
        .project-abstract {
            flex: 1 1 100%; /* Text takes 100% width on small screens or after wrapping */
            max-width: 100%;
     }
     .project-image {
         flex: 1 1 100%; /* Image also takes full width on small screens */
+        max-width: 100%;
         margin-left: 0;
     }
 }
