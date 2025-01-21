@@ -211,6 +211,7 @@
 
         .project-content {
             display: flex;
+            flex-direction: row; /* Aligns image and text side by side */
             flex-wrap: wrap; /* Allows content to wrap when needed */
             justify-content: space-between;
             margin-bottom: 20px;
@@ -237,10 +238,6 @@
             font-weight: normal; /* This ensures the text is not bold */
         }
 
-         .project-content-wrap {
-             display: block; /* Allows wrapping for text below the image */
-        }
-
         /* Full width for the text after the image ends */
        .project-content-wrap .project-image + .project-abstract {
             flex: 1 1 100%; /* Text takes 100% width when wrapping */
@@ -251,7 +248,7 @@
         /* Full width for the text when the image is not present or ends */
        @media (max-width: 768px) {
        .project-content {
-            flex-direction: row; /* Stacks image and text horizontally */
+            flex-direction: column; /* Stacks image and text horizontally */
     }
        .project-abstract {
            flex: 1 1 100%; /* Text takes 100% width on small screens or after wrapping */
