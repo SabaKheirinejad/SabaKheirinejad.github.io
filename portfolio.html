@@ -570,42 +570,50 @@ Virtual Reality (VR) is promising in communicating people’s hardship experienc
             </div>
 
 
-<!-- Project 8 -->
+ <!-- Project 9 -->
             <div class="project">
                 <div class="project-header">
-                    <h2>Exploring Situated Empathy through a Metaverse Campus</h2>
+                    <h2>Text-Based Traffic Panels Detection using the Tiny YOLOv3 Algorithm</h2>
                     <div class="project-author">
-                        <strong>Authors:</strong> Ville Paananen, Sina Kiarostami, Lik-Hang Lee, Aku Visuri, Saba Kheirinejad, Simo Hosio
+                        <strong>Authors:</strong> Saba Kheirinejad, Noushin Riahi, Reza Azmi
                     </div>
                 </div>
 
                 <div class="project-links">
-                    <a href="https://dl.acm.org/doi/abs/10.1145/3616961.3616971" class="pdf">PDF</a> 
-                    <a href="https://dl.acm.org/doi/pdf/10.1145/3616961.3616971"class="doi">DOI</a> 
-                    <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:manUUk4MKI4J:scholar.google.com/&output=citation&scisdr=ClEwG30TENbpgipNH_E:AFWwaeYAAAAAZ5FLB_GQt3Cb43_itIy6CxCeKDI&scisig=AFWwaeYAAAAAZ5FLB7flKPMcL3cDOv21SzLjl2o&scisf=4&ct=citation&cd=-1&hl=en"class="cite">CITE</a> 
+                    <a href="https://pdfs.semanticscholar.org/9ba1/11cad3d803e78800d755cf0e276bec557e63.pdf" class="pdf">PDF</a> 
+                    <a href="https://www.jenrs.com/v01/i03/p008/"class="doi">DOI</a> 
+                    <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:f2ptd9h7z-YJ:scholar.google.com/&output=citation&scisdr=ClEwG30TENbpgipkjIc:AFWwaeYAAAAAZ5FilIdgSIUC10bZmNZ9Gp5cEpE&scisig=AFWwaeYAAAAAZ5FilMSkLZQASn_cNTYXqOalA5Q&scisf=4&ct=citation&cd=-1&hl=en"class="cite">CITE</a> 
                 </div>
 
                 <div class="project-content">
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
-Virtual Reality (VR) is promising in communicating people’s hardship experiences in simulated situations. This can help foster empathy among people.
-                        In this paper, we present a VR experience designed to showcase the hardship experiences of an international higher education community concerning their studies and lives in an unfamiliar neighborhood.
-                        We collected hardship stories and data from 40 members of the community through an online questionnaire. The questionnaire analysis led to understanding critical issues, such as social problems, language barriers, issues with bureaucracy, and racism.
-                        We then turned the issues into interactive stories in VR. We recruited 18 participants to experience the hardship stories through interactions with avatars in a VR version of the campus where the community is located.
-                        Our preliminary results from the questionnaires suggest that the participants’ knowledge and tendency to willingness to discuss the hardships improved due to participating in the experience.
-                        Further, our semi-structured interviews reflect positively on the VR experience’s memorability, the stories’ plausibility and participants’ increased situated empathy and awareness regarding the hardships of the local international community. 
-                        This early exploration informs future studies focusing on situated empathy.
+ Lately, traffic panel detection has been engrossed by academia and industry. This study proposes a new
+categorization method for traffic panels. The traffic panels are classified into three classes: symbol-based, text-based,
+and supplementary/additional traffic panels. Although few types of research have investigated text-based traffic panels,
+this type is considered in detail in this study. However, there are many challenges in this type of traffic panel, such as
+having different languages in different countries, their similarity with other text panels, and the lack of suitable quality
+datasets. The panels need to be detected first to obtain a reasonable accuracy in recognizing the text. Since there are few
+public text-based traffic panel datasets, this study gathered a novel dataset for the Persian text-based traffic panels all
+over the streets of Tehran-Iran. This dataset includes two collections of images. The first collection has 9294 images, and
+the latter has 3305 images. The latter dataset is more monotonous than the first one. Thus, the latter is utilized as the
+main dataset, and the first is used as an additional dataset. To this end, the algorithm uses the additional dataset for
+pre-training and the main datasets for training the network. The tiny YOLOv3 algorithm that is fast and has low
+complexity compared to the YOLOv3 is used for pre-training, training, and testing the data to examine the utility and
+advantages of the data. The K-fold cross-validation procedure is used to estimate the model's skill on the new data. It
+achieves 0.973 for Precision, 0.945 for Recall, and 0.955 for Fmeasure.
                     </div>
                     <div class="project-image">
-                       <img src="images/dialogue.jpg" alt="Project Image">
+                       <img src="images/blocked.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
 
-            <!-- Project 9 -->
+
+            <!-- Project 10 -->
             <div class="project">
                 <div class="project-header">
-                    <h2>Persian Text Based Traffic sign Detection with Convolutional Neural Network: A New Dataset</h2>
+                    <h2>Persian Text-Based Traffic Sign Detection with Convolutional Neural Network: A New Dataset</h2>
                     <div class="project-author">
                         <strong>Authors:</strong> Saba Kheirinejad, Noushin Riahi, Reza Azmi
                     </div>
@@ -623,15 +631,15 @@ Virtual Reality (VR) is promising in communicating people’s hardship experienc
 Recently, traffic panel detection has attracted both academic and industrial attention. However, there are a few works that studied text-based traffic panels.  This is because there are many challenges in this kind of traffic panels. To obtain an
 appropriate accuracy in text recognition in the text-based traffic panels, we need to detect the panel. Since there is no public text-based traffic panels dataset, we collected a new dataset
 included the Persian text-based traffic panels in the streets of Tehran-Iran for the first time. Our dataset contains two sets of figures.
-The first set has 9294 pictures and the second set has 3305 pictures. The second dataset is more uniform than the
+The first set has 9294 pictures, and the second set has 3305 pictures. The second dataset is more uniform than the
 first dataset. Therefore, we exploit the first set as an additional dataset and use the second one as the main dataset. Accordingly,
 we pretrain the network by the additional dataset and train it by the main dataset. We use the tiny YOLOv3 (You Only Look Once
 version three) algorithm to pretrain, train, and test the dataset. The algorithm is fast and has low complexity. 
-We use K-fold cross validation method to appraise efficiency of the algorithm.
+We use K-fold cross-validation method to appraise the efficiency of the algorithm.
 From the results section, we can see that Precision is 0.973, Recall is 0.945, and F-measure is 0.955.
                     </div>
                     <div class="project-image">
-                       <img src="images/blocked.jpg" alt="Project Image">
+                       <img src="images/oblique.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
