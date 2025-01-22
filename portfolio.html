@@ -211,7 +211,7 @@
 
         .project-content {
             display: flex;
-            flex-direction: row; /* Aligns image and text side by side */
+           /* flex-direction: row;  Aligns image and text side by side */
             flex-wrap: wrap; /* Allows content to wrap when needed */
             justify-content: space-between;
             margin-bottom: 20px;
@@ -235,13 +235,14 @@
             font-size: 14px;
             line-height: 1.5;
             font-weight: normal; /* This ensures the text is not bold */
+            align-self: stretch; /* Matches the height of the image when next to it */
         }
 
-        /* Full width for the text after the image ends */
-       .project-content-wrap .project-image + .project-abstract {
-            flex: 1 1 100%; /* Text takes 100% width when wrapping */
-            max-width: 100%;
-}
+        /* Automatically makes the text span full width after the image ends */
+       .project-abstract:nth-child(2) {
+          flex: 1 1 100%; /* Text takes 100% width after wrapping */
+          max-width: 100%; /* Ensures full-width usage */
+        }
 
         
         /* Full width for the text when the image is not present or ends */
