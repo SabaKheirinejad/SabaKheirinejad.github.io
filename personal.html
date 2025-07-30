@@ -1,1 +1,208 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Saba Kheirinejad</title>
+    <style>
+        html, body {
+            height:100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+            background:  #fbf6f6;   /*   #f1f1f1  #E8F8F5 ; */
+            color:  #212F3C; /*#0B5345 #148F77*/
+        }
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;  /* Adjusted overall padding */
+            background: #fbf6f6;
+            margin-left: 26%;
+        }
+       header a {
+            display: inline-block;
+            padding-top: 20px;
+            background:#fbf6f6;
+            color:  #212F3C;
+            margin-right:50px; 
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .active {
+            font-weight: bold;
+/*             text-decoration: underline; */
+        }
+        header a:first-child {
+            margin-left: 0;
+        }
+        footer {
+            width: 100%;
+            padding: 35px 20px;
+            background: #fbf6f6;
+            color: #AEB6BF;
+            text-align: center;
+            align-items: center;
+        }
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+            margin-left: 26%; 
+        }
+        .content section {
+           max-width: 800px;
+           padding-bottom: 20px; /* Padding below each section content */
+           margin-bottom: 15px; /* Space below the divider line */
+        }
+        .content ul {
+          list-style-type: disc;; /*No bullets */
+          padding: 0; /* Reset padding */
+        }
+        .content li {
+         padding: 5px 0; /* Vertical padding for each list item */
+        }
+        .content h2 {
+        border-bottom: 4px solid #1d9ea7 ; /* #F1C40F Color and thickness of the border */
+        padding-bottom: 10px; /* Space between the text and the border */
+        margin-bottom: 20px; /* Space below the border before the list starts */
+        }
+        .content a {
+         color:  #1d9ea7; /* Change the colour of the link in the main text */
+         text-decoration: underline; /* Optional: removes underline */
+        }
 
+        .sidebar {
+            position: fixed; /* Stick sidebar to the screen */
+            top: 0; /* Align top */
+            left: 0; /* Align left */
+            width: 23%;
+            height: 100vh; /* Ensures at least viewport height */
+             background-color: #1d9ea7; /*  #29abb3 #16A085   #73C6B6 */
+            color:  #212F3C;
+            /*  display: flex;
+            flex-direction: column;
+            justify-content: start; */
+            overflow-y: auto; /* Enable scrolling within sidebar */
+        }
+        
+         .sidebar h3 {
+            margin-left: 30px;
+            font-size: 22px;
+        }
+        .sidebar p {
+            text-align: justify;
+            max-width: 200px; /* Limit the width for better readability */
+            line-height: 1.6;
+            margin-left: 30px;
+            padding-top: 0;
+            font-size:16px;
+        }
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            margin-bottom: 20px;  
+            margin-left: 30px;
+            margin-top: 30px;
+            margin-right: auto;
+        }
+        .profile-links a {
+            color: #212F3C;
+            text-decoration: none;
+            display: block;
+            margin-left: 30px;
+            margin-bottom: 20px;
+             margin-top: 30px;
+             font-size: 14px;
+        }
+        .profile-links i {
+            margin-right: 5px;
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+               .sidebar {
+                width: 100%; /* Full width on smaller screens */
+                order: -1; /* Optionally move to the top or bottom */
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="images/photo.jpg" alt="Saba Kheirinejad" class="profile-pic">
+        <h3>Saba Kheirinejad</h3>
+        <p> Postdoctoral Fellow and UX Researcher at the University of Tennessee Health Science Center (UTHSC)</p>
+        <div class="profile-links">
+            <a href="https://www.linkedin.com/in/saba-kheirinejad/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=H95bR-0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <a href="https://github.com/SabaKheirinejad"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <a href="index.html" class="active">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="portfolio.html">Projects</a>
+        </header>
+        <div class="content">
+            <h1>Hi, I'm Saba!</h1>
+            <section id="background">
+                <h2>About me</h2>
+       <p> 
+      </p>
+             
+              <p> I'm deeply passionate about Human-Computer Interaction (HCI) and love exploring how people interact with technology. 
+             Whether it's through numbers or stories, I enjoy using both quantitative and qualitative research methods to uncover insights.
+             </p>
+               
+                  <p> Research interests: Human-Computer Interaction, User Experience Research,
+                      Mobile Health, Data Analysis, AI, and Social Computing.</p>
+              
+            </section>  
+            <section id="current project">
+                <h2>Current Projects </h2>
+                <ul>
+                    <li> Exploring the Impact of Emotional Awareness in AI-Driven Chatbots on Human Interaction.
+                    <li> Exploring Communal Gratitude in Online Communities.
+            
+                </ul>
+
+
+                <h2>News </h2>
+                <ul>
+                     <li><strong>April 13, 2025:</strong> Attended the third annual Bay Area HCI gathering at UC Berkeley. </li>
+                     <li><strong>April 1, 2025:</strong> I began working as a Postdoctoral Fellow at the PopHI Lab at The University of Tennessee Health Science Center (UTHSC). </li>
+                     <li><strong>Dec 5, 2024:</strong> Attended the 2nd Annual UCSC Computational Media Industry Advisory Board Meeting at the UCSC Silicon Valley Campus in Santa Clara. </li>
+                     <li><strong>Dec 3, 2024:</strong> Gave a talk at the UCSC Computational Media group at UCSC Silicon Valley Campus, Santa Clara.</li>
+                     <li><strong>Nov 15, 2024:</strong> Defended my PhD thesis on November 15, 2024! Hooray, I’m officially a doctor now! 😊</li>
+                     <li><strong>Oct 21-23, 2024:</strong> Attended the 2024 Halfway to the Future Symposium in Santa Cruz, California.</li>
+                </ul>
+        </div>
+        <footer>
+            <p>© 2024 Saba Kheirinejad. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
