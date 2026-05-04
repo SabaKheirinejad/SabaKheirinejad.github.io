@@ -230,48 +230,33 @@
             align-items: flex-start; /* Aligns items at the top */
         }
 
-        .project-image {
-            flex: 1 1 50%;
-            max-width: 50%; /* Prevents exceeding 60% */
-        }
+    margin-bottom: 20px;
+    overflow: hidden; /* clearfix for the float */
+      }.project-image {
+          float: right;
+          width: 50%;
+          max-width: 50%;
+          margin-left: 15px;
+         margin-bottom: 10px;
+     }.project-image img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+     }.project-abstract {
+          font-size: 14px;
+          line-height: 1.5;
+          font-weight: normal;
+         text-align: justify;
+      }
 
-        .project-image img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .project-abstract {
-            flex: 1 1 50%; /* Takes 40% width when image is present */
-            max-width: 47%; /* Ensures it doesn't exceed 40% when the image is present */
-            font-size: 14px;
-            line-height: 1.5;
-            font-weight: normal; /* This ensures the text is not bold */
-            align-self: stretch; /* Matches the height of the image when next to it */
-        }
-
-        /* Automatically makes the text span full width after the image ends */
-       .project-abstract:nth-child(2) {
-          flex: 1 1 100%; /* Text takes 100% width after wrapping */
-          max-width: 100%; /* Ensures full-width usage */
-        }
-
-        
-        /* Full width for the text when the image is not present or ends */
-       @media (max-width: 768px) {
-       .project-content {
-            flex-direction: column; /* Stacks image and text horizontally */
-    }
-       .project-abstract {
-           flex: 1 1 100%; /* Text takes 100% width on small screens or after wrapping */
-           max-width: 100%;
-    }
-    .project-image {
-        flex: 1 1 100%; /* Image also takes full width on small screens */
+      @media (max-width: 768px) {.project-image {
+        float: none;
+        width: 100%;
         max-width: 100%;
         margin-left: 0;
     }
-}
-
+}  
+     
     </style>
 </head>
 <body>
@@ -315,7 +300,10 @@
                 </div>
 
                 <div class="project-content">
-                    <div class="project-abstract">
+                    <div class="project-image">
+                        <img src="images/User-centered.png" alt="Project Image">
+                    </div>
+                    <div class="project-abstract">   
                     <strong>ABSTRACT:</strong>
 
 Navigation programs for patients with cancer improve access and continuity of care, yet their digital transformation is often limited by poor usability and inadequate uptake. 
@@ -329,9 +317,6 @@ Two reviewers independently screened records and charted data on context, target
 Iterative prototyping and usability testing were the most common, while participatory design and implementation evaluation were underused. UCD/HCD approaches enhance usability and patient relevance of digital cancer navigation tools. 
  However, their application remains limited across cancer types, regions, and functions. Broader stakeholder participation and evaluation beyond usability are needed to strengthen coordination, equity, and sustainability in cancer care.
                        </div>
-                    <div class="project-image">
-                        <img src="images/User-centered.png" alt="Project Image">
-                    </div>
                 </div>
             </div>
             
@@ -352,6 +337,9 @@ Iterative prototyping and usability testing were the most common, while particip
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/Empathic.png" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Artificial intelligence (AI) is rapidly reshaping oncology, offering advancements in clinical care and patient support. 
@@ -366,15 +354,9 @@ Common applications include personalized education for patients and providers, s
 Several studies noted improved patient engagement and reduced clinician burden. However, concerns were identified regarding overreliance on AI systems, cultural insensitivity, and patient privacy. 
 Empathic AI represents a promising advancement in patient-centered oncology, integrating emotional intelligence into clinical care. Its successful implementation will require careful attention to ethical, cultural, and clinical considerations to ensure health equity, trust, and safety in AI-assisted cancer care.
                     </div>
-                    <div class="project-image">
-                        <img src="images/Empathic.png" alt="Project Image">
-                    </div>
                 </div>
             </div>
-
-
-
-            
+   
 
 <!-- Project 14 -->
             <div class="project">
@@ -392,6 +374,9 @@ Empathic AI represents a promising advancement in patient-centered oncology, int
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/Human-Centered AI.png" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 For patients experiencing cancer, nurse navigation can ease the burden of complex care by enhancing coordination of
@@ -402,9 +387,6 @@ perspective piece discusses a human-centered AI framework that integrates empath
 grounded in the American Nurses Association’s code of ethics to support nurses in the United States in cancer care
 navigation. The framework could augment, not replace, human empathy and agency while improving nurse
 workflow, patient—clinician relationships, and care coordination services in under-resourced areas.
-                    </div>
-                    <div class="project-image">
-                        <img src="images/Human-Centered AI.png" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -428,6 +410,9 @@ workflow, patient—clinician relationships, and care coordination services in u
                 </div>
 
                 <div class="project-content">
+                     <div class="project-image">
+                        <img src="images/LLM.png" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Unplanned interruptions in radiation therapy (RT) increase clinical risks, yet proactive, personalized psychosocial support remains limited. 
@@ -437,9 +422,6 @@ The system uses dual LLMs, one for persona generation and another for empathic r
 We evaluated the outputs using statistical similarity tests, quantitative metrics (BERTScore, SDoH relevance, empathy, persona distinctness), and qualitative human assessment.
 The results demonstrate the feasibility of scalable, secure, and context-aware dialogue for early-stage AI development. 
 This HIPAA/GDPR compliant framework supports ethical testing of empathic clinical support tools and lays the groundwork for AI-driven interventions to improve RT adherence.
-                    </div>
-                    <div class="project-image">
-                        <img src="images/LLM.png" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -461,6 +443,9 @@ This HIPAA/GDPR compliant framework supports ethical testing of empathic clinica
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/Gratitude.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Online communities are increasingly important in forming and maintaining relationships but have also faced
@@ -478,9 +463,6 @@ and empathy; and contributing to a cycle of gratitude and vulnerability. Partici
 design related to better support for interaction and connection, privacy and authenticity, and motivation and
 engagement. We conclude by discussing implications for future research on the design of prosocial online
 communities centering cycles of positivity and authentic individual reflection in communal interactions.
-                    </div>
-                    <div class="project-image">
-                        <img src="images/Gratitude.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -503,6 +485,9 @@ communities centering cycles of positivity and authentic individual reflection i
                 </div>
 
                 <div class="project-content">
+                     <div class="project-image">
+                        <img src="images/sleep.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Smartphones have become an integral part of people’s everyday lives. Smartphones are used across all household locations, including in the bed at night. Smartphone screens and other displays emit blue light, and exposure to blue light can
@@ -518,13 +503,8 @@ might yield more information than general smartphone use. In conclusion, this pa
 association between smartphone application use logs and detailed sleep metrics. Our work also validates previous research
 results and highlights emerging future work.
                     </div>
-                    <div class="project-image">
-                        <img src="images/sleep.jpg" alt="Project Image">
-                    </div>
                 </div>
             </div>
-
-
 
             
             <!-- Project 10 -->
@@ -543,6 +523,9 @@ results and highlights emerging future work.
                 </div>
 
                 <div class="project-content">
+                     <div class="project-image">
+                        <img src="images/application.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 The adoption of Mobile Health (mHealth) for self-management is growing. mHealth solutions
@@ -561,9 +544,6 @@ and customization” is the most significant feature as it is beneficial from st
 and is represented by most applications. In contrast, “Gamification” and “Artificial intelligence”
 are the least significant features, indicating a lack of attention from application creators and
 researchers in this area.
-                    </div>
-                    <div class="project-image">
-                        <img src="images/application.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -586,6 +566,9 @@ researchers in this area.
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/Oura_ring.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 A new generation of wearable devices now enables end-users to keep track of their sleep patterns. This paper
@@ -595,9 +578,6 @@ perceptions of the tracked information and sleep, and the overall experience of 
 identifying detrimental lifestyle elements that hinder sleep quality. However, tracking one’s sleep can also
 introduce stress or physical discomfort, potentially leading to adverse outcomes. We discuss these findings in
 light of related work and highlight the near-term research directions that the rapid commoditisation of sleep-tracking technology enables.
-                    </div>
-                    <div class="project-image">
-                        <img src="images/Oura_ring.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -619,6 +599,9 @@ light of related work and highlight the near-term research directions that the r
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/Privacy.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Public controversies around the unethical use of personal data are increasing, spotlighting data ethics as an increasingly important field of study. 
@@ -628,9 +611,6 @@ to an online crowdsourcing platform for assessment and invited a representative 
 healthcare. Our results provide a timely investigation into how topical data-related practices affect the perceived ethicality and the felt concern.
 The questionnaire analysis reveals great potential in the MyData vision. Through the combined quantitative and qualitative results, 
                         we contribute to the field of data ethics.
-                    </div>
-                    <div class="project-image">
-                        <img src="images/Privacy.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -652,6 +632,9 @@ The questionnaire analysis reveals great potential in the MyData vision. Through
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                       <img src="images/mHealth.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
                     Chronic pain is a prolonged condition that deteriorates one's quality of life.
@@ -665,9 +648,6 @@ The questionnaire analysis reveals great potential in the MyData vision. Through
                     We highlight the benefits of mHealth solutions for people with chronic pain and the perceived obstacles to their increased adoption.
                     We provide recommendations to encourage people to try mHealth solutions as part of their self-care.
                     </div>  
-                    <div class="project-image">
-                       <img src="images/mHealth.jpg" alt="Project Image">
-                    </div>
                 </div>
             </div>
 
@@ -689,6 +669,9 @@ The questionnaire analysis reveals great potential in the MyData vision. Through
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                       <img src="images/ERG.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
                         This paper reports on a summative analysis of Exploratory Reading Groups (ERGs), a low time-commitment, relational, student-led reading group program designed to provide students from any background and year with a broad exploration of computing research. Since prior work, the program was institutionalized as a 1-credit course with a greater emphasis on strengthening pipelines into research labs.
@@ -697,9 +680,6 @@ The questionnaire analysis reveals great potential in the MyData vision. Through
                         confidence in reading, presenting, and communicating about their field; sense of belonging for women and minoritized ethnic groups; alignment with faculty goals in joining research labs (greater desire to make a research contribution and publish,
                         decreased desire to join for the purpose of exploration); and engagement in the ‘reconsideration’ dimension of career identity formation. Over 70% of the participants continued on into group research projects for undergraduate students. 
                         The effectiveness of this scalable, lightweight initiative shows the promise of ERGs as a tool to support students in computing when connected to group research projects and points to future research directions on designing other lightweight, relational, scalable learning experiences.
-                    </div>
-                    <div class="project-image">
-                       <img src="images/ERG.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -721,6 +701,9 @@ The questionnaire analysis reveals great potential in the MyData vision. Through
                 </div>
 
                 <div class="project-content">
+                     <div class="project-image">
+                       <img src="images/Adjustable desk.jpeg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Sedentary behavior is endemic in modern workplaces, contributing to negative physical and mental health outcomes. 
@@ -731,9 +714,6 @@ Smart mode, which raises the desk during breaks, was the best rated, contributin
 However, non-computer activities need to be accounted for in the future. 
 Therefore, our results indicate that a smart standing desk that shifts modes at opportune times has the most potential to reduce sedentary behavior in the workplace.
 We contribute our open-source system and insights for future intelligent workplace well-being systems.
-                    </div>
-                    <div class="project-image">
-                       <img src="images/Adjustable desk.jpeg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -755,6 +735,9 @@ We contribute our open-source system and insights for future intelligent workpla
                 </div>
 
                 <div class="project-content">
+                     <div class="project-image">
+                       <img src="images/dialogue.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Virtual Reality (VR) is promising in communicating people’s hardship experiences in simulated situations. This can help foster empathy among people.
@@ -764,9 +747,6 @@ Virtual Reality (VR) is promising in communicating people’s hardship experienc
                         Our preliminary results from the questionnaires suggest that the participants’ knowledge and tendency to willingness to discuss the hardships improved due to participating in the experience.
                         Further, our semi-structured interviews reflect positively on the VR experience’s memorability, the stories’ plausibility and participants’ increased situated empathy and awareness regarding the hardships of the local international community. 
                         This early exploration informs future studies focusing on situated empathy.
-                    </div>
-                    <div class="project-image">
-                       <img src="images/dialogue.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -788,6 +768,9 @@ Virtual Reality (VR) is promising in communicating people’s hardship experienc
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                       <img src="images/blocked.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
  Lately, traffic panel detection has been engrossed by academia and industry. This study proposes a new
@@ -804,9 +787,6 @@ pre-training and the main datasets for training the network. The tiny YOLOv3 alg
 complexity compared to the YOLOv3 is used for pre-training, training, and testing the data to examine the utility and
 advantages of the data. The K-fold cross-validation procedure is used to estimate the model's skill on the new data. It
 achieves 0.973 for Precision, 0.945 for Recall, and 0.955 for Fmeasure.
-                    </div>
-                    <div class="project-image">
-                       <img src="images/blocked.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -828,6 +808,9 @@ achieves 0.973 for Precision, 0.945 for Recall, and 0.955 for Fmeasure.
                 </div>
 
                 <div class="project-content">
+                     <div class="project-image">
+                       <img src="images/oblique.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Recently, traffic panel detection has attracted both academic and industrial attention. However, there are a few works that studied text-based traffic panels.  This is because there are many challenges in this kind of traffic panels. To obtain an
@@ -839,9 +822,6 @@ we pretrain the network by the additional dataset and train it by the main datas
 version three) algorithm to pretrain, train, and test the dataset. The algorithm is fast and has low complexity. 
 We use K-fold cross-validation method to appraise the efficiency of the algorithm.
 From the results section, we can see that Precision is 0.973, Recall is 0.945, and F-measure is 0.955.
-                    </div>
-                    <div class="project-image">
-                       <img src="images/oblique.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
@@ -863,6 +843,9 @@ From the results section, we can see that Precision is 0.973, Recall is 0.945, a
                 </div>
 
                 <div class="project-content">
+                    <div class="project-image">
+                       <img src="images/edge.jpg" alt="Project Image">
+                    </div>
                     <div class="project-abstract">
                     <strong>ABSTRACT:</strong>
 Edge detection is a substantial operation in machine vision and image processing. Recently, many ant colony
@@ -872,9 +855,6 @@ new heuristic information function (HIF) namely group based heuristic informatio
 which ants visit around their place. Our proposed HIF exploits the difference between the intensity of two groups of nodes
 instead of two single one. In the simulation result section we show that the robustness of proposed edge detection algorithm
 is more than that of the previous algorithms.
-                    </div>
-                    <div class="project-image">
-                       <img src="images/edge.jpg" alt="Project Image">
                     </div>
                 </div>
             </div>
