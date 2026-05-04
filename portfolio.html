@@ -22,7 +22,6 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            /*padding-left: 23%; /* Account for sidebar */ */
         }
 
         header {
@@ -32,33 +31,37 @@
             background: #fbf6f6;
             margin-left: 27%;
         }
-         header a {
+
+        header a {
             display: inline-block;
             padding-top: 20px;
             background: #fbf6f6;
             color:  #212F3C;
-            margin-right:50px; 
+            margin-right: 50px; 
             font-size: 18px;
             text-decoration: none;
         }
+
         .active {
             font-weight: bold;
-/*             text-decoration: underline; */
         }
+
         header a:first-child {
             margin-left: 0;
         }
+
         footer {
-    width: 77%; /* The footer occupies the remaining 77% of the width, after the sidebar */
-    padding: 35px 20px;
-    background: #fbf6f6;
-    color: #AEB6BF;
-    text-align: center;
-    left: 23%; /* Starts after the sidebar which is 23% of the full width */
-    right: 0; /* Ensures the footer extends to the end of the container */
-    margin-left: calc((77% - 800px) / 2); /* Centers the text by adjusting the left margin within the 77% area */
-    font-weight: normal; /* This ensures the footer text is not bold */
-}
+            width: 77%;
+            padding: 35px 20px;
+            background: #fbf6f6;
+            color: #AEB6BF;
+            text-align: center;
+            left: 23%;
+            right: 0;
+            margin-left: calc((77% - 800px) / 2);
+            font-weight: normal;
+        }
+
         .main-content {
             display: flex;
             flex-grow: 1;
@@ -70,76 +73,80 @@
             max-width: 800px;
             text-align: justify;
             line-height: 1.6;
-            padding-left: 27%; /* Account for sidebar */
-        }
-         .content section {
-           max-width: 800px;
-           padding-bottom: 20px; /* Padding below each section content */
-           margin-bottom: 15px; /* Space below the divider line */
+            padding-left: 27%;
         }
 
-       .sidebar {
-            position: fixed; /* Stick sidebar to the screen */
-            top: 0; /* Align top */
-            left: 0; /* Align left */
-            width: 23%;
-            height: 100vh; /* Ensures at least viewport height */
-            background-color:#1d9ea7;
-            color:  #212F3C;
-            /* display: flex;
-            flex-direction: column;
-            justify-content: start; */
-            overflow-y: auto; /* Enable scrolling within sidebar */
+        .content section {
+            max-width: 800px;
+            padding-bottom: 20px;
+            margin-bottom: 15px;
         }
-         .sidebar h3 {
-            margin-top: -8px;   /* reduce space above */
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 23%;
+            height: 100vh;
+            background-color: #1d9ea7;
+            color:  #212F3C;
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            margin-top: -8px;
             margin-left: 30px;
             font-size: 22px;
         }
+
         .sidebar p {
             text-align: justify;
-            max-width: 200px; /* Limit the width for better readability */
+            max-width: 200px;
             line-height: 1.6;
             margin-left: 30px;
             margin-top: -15px;
             font-size: 13px;
         }
 
-       .profile-pic {
+        .profile-pic {
             width: 180px;
             height: auto;
-            object-fit: cover;      /* prevents distortion */
-            border-radius: 12px;    /* rounded square */
+            object-fit: cover;
+            border-radius: 12px;
             margin-bottom: 20px;  
             margin-left: 32px;
             margin-top: 30px;
             margin-right: auto;
         }
-       .profile-links {
-    margin-top: 9px; /* reduces big space above LinkedIn */
-    display: flex;
-    flex-direction: column;
-    gap: 9px; /* controls spacing between LinkedIn / GS / GitHub */
-}
 
-.profile-links a {
-    color: #212F3C;
-    text-decoration: none;
-    display: block;
-    margin-left: 30px;
-    font-size: 11px;
-}
-    /* Target only the Google Scholar text */
-.profile-links a:nth-child(2) span {
-    margin-left: -2px;  /* adjust -2, -3, -5 as needed */
-}
-      .profile-links i {
-    margin-right: 5px;
-    vertical-align: middle;  /* <-- This fixes the misalignment */
-}
+        .profile-links {
+            margin-top: 9px;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .profile-links a {
+            color: #212F3C;
+            text-decoration: none;
+            display: block;
+            margin-left: 30px;
+            font-size: 11px;
+        }
+
+        .profile-links a:nth-child(2) span {
+            margin-left: -2px;
+        }
+
+        .profile-links i {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
         
+        /* ========== PROJECT CARDS ========== */
+
         .project {
-            border: 1px solid  #fff;
+            border: 1px solid #fff;
             padding: 20px;
             margin-bottom: 30px;
             background-color: #fff;
@@ -147,27 +154,29 @@
             display: flex;
             flex-direction: column;
         }
+
         .project-header {
-            position: relative; /* Ensure the vertical line is positioned relative to the header */
-}
-       
-          .project-header h2 {
-            font-weight: 700; /* 700 is the numeric value for bold */
+            position: relative;
+        }
+
+        .project-header h2 {
+            font-weight: 700;
             font-size: 18px;
-            margin-bottom: 10px; /* Adjust the value for the desired spacing */
+            margin-bottom: 10px;
             padding-left: 25px;
             color: #1d9ea7;
-         }
+        }
 
-          .project-header h2::before {
+        .project-header h2::before {
             content: '';
             position: absolute;
             left: 2px;
             top: 20px;
             bottom: 20px;
-            width: 9px; /* Vertical line thickness */
-            background-color: #1d9ea7; /* Line color */
-}
+            width: 9px;
+            background-color: #1d9ea7;
+        }
+
         .project-author {
             font-size: 13px;
             color: #333;
@@ -180,7 +189,7 @@
             gap: 15px;
             font-size: 13px;
             margin-bottom: 20px;
-            color: #1d9ea7; /* Matches your color scheme */;
+            color: #1d9ea7;
         }
 
         .project-links a {
@@ -188,76 +197,76 @@
             color: inherit;
             display: flex;
             align-items: center;
-             margin-right: 30px;
+            margin-right: 30px;
         }
 
-     /* PDF icon */
-.project-links a.pdf::before {
-    content: "\f1c1"; /* Font Awesome PDF icon */
-    font-family: "Font Awesome 5 Free"; /* Ensure it's using Font Awesome */
-    font-weight: 900; /* Required for solid icons */
-    margin-right: 5px; /* Spacing between icon and text */
-    font-size: 20px; /* Adjust size as needed */
-    color: #1d9ea7; /* Matches your color scheme */
-}
+        .project-links a.pdf::before {
+            content: "\f1c1";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px;
+            font-size: 20px;
+            color: #1d9ea7;
+        }
 
-.project-links a.doi::before {
-    content: "\f0c1"; /* Font Awesome chain link icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* Required for solid icons */
-    color: #1d9ea7; /* Matches your color scheme */
-    margin-right: 5px; /* Adjust spacing */
-    font-size: 20px; /* Adjust size as needed */
-}
-        
-/* Cite icon using quotation mark from Font Awesome */
-.project-links a.cite::before {
-    content: "\f10e"; /* Font Awesome quotation mark icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* Required for solid icons */
-    color: #1d9ea7; /* Use your preferred color */
-    font-size: 20px; /* Adjust size as necessary */
-    margin-right: 5px; /* Space between icon and text */
-}
+        .project-links a.doi::before {
+            content: "\f0c1";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #1d9ea7;
+            margin-right: 5px;
+            font-size: 20px;
+        }
+
+        .project-links a.cite::before {
+            content: "\f10e";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #1d9ea7;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        /* ========== KEY LAYOUT: Float image top-right, text wraps ========== */
 
         .project-content {
-            display: flex;
-           /* flex-direction: row;  Aligns image and text side by side */
-            flex-wrap: wrap; /* Allows content to wrap when needed */
-            justify-content: space-between;
             margin-bottom: 20px;
-            /*align-items: stretch;  Ensure both text and image take the full height of the container */
-            align-items: flex-start; /* Aligns items at the top */
+            overflow: hidden; /* clearfix for the float */
         }
 
-       margin-bottom: 20px;
-    overflow: hidden; /* clearfix for the float */
-}.project-image {
-    float: right;
-    width: 35%;
-    max-width: 35%;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    margin-top: 5px;
-}.project-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}.project-abstract {
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: normal;
-    text-align: justify;
-}
+        .project-image {
+            float: right;
+            width: 35%;
+            max-width: 35%;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
 
-     @media (max-width: 768px) {.project-image {
-        float: none;
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
-    }
-}
-     
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-abstract {
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: normal;
+            text-align: justify;
+        }
+
+        /* ========== RESPONSIVE ========== */
+
+        @media (max-width: 768px) {
+            .project-image {
+                float: none;
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -279,12 +288,12 @@
             <a href="index.html">Home</a>
             <a href="publications.html">Publications</a>
             <a href="portfolio.html" class="active">Projects</a>
-        
         </header>
 
         <div class="content">
             <h1>Selected Projects</h1>
-
+            
+            
 <!-- Project 16 -->
             <div class="project">
                 <div class="project-header">
