@@ -147,19 +147,46 @@
     margin-right: 5px;
     vertical-align: middle;  /* <-- This fixes the misalignment */
 }
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                order: -1;
-            }
-            .container {
-               height: 100%; /* Makes container take full height */
-               width: 100%; /* Makes container take full width */
-            }
-        }
+       @media (max-width: 768px) {
+    html, body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header a {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+    }
+}
     </style>
 </head>
 <body>
