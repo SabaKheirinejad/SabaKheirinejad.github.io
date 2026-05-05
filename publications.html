@@ -153,12 +153,47 @@
     display: block;
 }
 
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding-bottom: 20px;
-    }
+.sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 80px;
+    margin: 0 15px 0 0;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.sidebar p {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    max-width: 250px;
+    text-align: left;
+}
+
+.profile-links {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.profile-links a {
+    margin-left: 0;
+    font-size: 11px;
+}
 
     .container {
         width: 100%;
