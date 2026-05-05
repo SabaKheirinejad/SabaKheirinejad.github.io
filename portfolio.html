@@ -258,14 +258,52 @@
 
         /* ========== RESPONSIVE ========== */
 
-        @media (max-width: 768px) {
-            .project-image {
-                float: none;
-                width: 100%;
-                max-width: 100%;
-                margin-left: 0;
-            }
-        }
+@media (max-width: 768px) {
+    html, body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header a {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .content {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+    }
+
+    .project-image {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+    }
+}
 
     </style>
 </head>
