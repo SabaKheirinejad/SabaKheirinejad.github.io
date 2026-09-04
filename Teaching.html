@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Teaching — Saba Kheirinejad</title>
+    <style>
+        html, body {
+            height:100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+            background:  #fbf6f6;   /*   #f1f1f1  #E8F8F5 ; */
+            color:  #212F3C; /*#0B5345 #148F77*/
+        }
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;  /* Adjusted overall padding */
+            background: #fbf6f6;
+            margin-left: 26%;
+        }
+       header a {
+            display: inline-block;
+            padding-top: 20px;
+            background:#fbf6f6;
+            color:  #212F3C;
+            margin-right:50px; 
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .active {
+            font-weight: bold;
+/*             text-decoration: underline; */
+        }
+        header a:first-child {
+            margin-left: 0;
+        }
+        footer {
+            width: 100%;
+            padding: 35px 20px;
+            background: #fbf6f6;
+            color: #AEB6BF;
+            text-align: center;
+            align-items: center;
+        }
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+            margin-left: 26%; 
+        }
+        .content section {
+           max-width: 800px;
+           padding-bottom: 20px; /* Padding below each section content */
+           margin-bottom: 15px; /* Space below the divider line */
+        }
+        .content ul {
+          list-style-type: disc;; /*No bullets */
+          padding: 0; /* Reset padding */
+        }
+        .content li {
+         padding: 5px 0; /* Vertical padding for each list item */
+        }
+        .content h2 {
+        border-bottom: 4px solid #1d9ea7 ; /* #F1C40F Color and thickness of the border */
+        padding-bottom: 10px; /* Space between the text and the border */
+        margin-bottom: 20px; /* Space below the border before the list starts */
+        }
+        .content a {
+         color:  #1d9ea7; /* Change the colour of the link in the main text */
+         text-decoration: underline; /* Optional: removes underline */
+        }
 
+        /* ---- Teaching page additions ---- */
+        .course {
+            border-left: 4px solid #1d9ea7;
+            padding: 2px 0 2px 18px;
+            margin-bottom: 28px;
+            text-align: left;
+        }
+        .course h3 {
+            margin: 0 0 4px 0;
+            font-size: 18px;
+        }
+        .course .term {
+            display: block;
+            font-size: 13px;
+            color: #5D6D7E;
+            margin-bottom: 8px;
+        }
+        .course p {
+            margin: 0;
+            text-align: justify;
+        }
+        .course ul {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+        }
+        .course li {
+            padding: 3px 0;
+        }
+        /* -------------------------------- */
+
+        .sidebar {
+            position: fixed; /* Stick sidebar to the screen */
+            top: 0; /* Align top */
+            left: 0; /* Align left */
+            width: 23%;
+            height: 100vh; /* Ensures at least viewport height */
+             background-color: #1d9ea7; /*  #29abb3 #16A085   #73C6B6 */
+            color:  #212F3C;
+            /*  display: flex;
+            flex-direction: column;
+            justify-content: start; */
+            overflow-y: auto; /* Enable scrolling within sidebar */
+        }
+        
+         .sidebar h3 {
+            margin-top: -8px;   /* reduce space above */
+            margin-left: 30px;
+            font-size: 22px;
+        }
+        .sidebar p {
+            text-align: justify;
+            max-width: 200px; /* Limit the width for better readability */
+            line-height: 1.6;
+            margin-left: 30px;
+            margin-top: -15px;
+            font-size:13px;
+        }
+        .profile-pic {
+            width: 180px;
+            height: auto;
+            object-fit: cover;      /* prevents distortion */
+            border-radius: 12px;    /* rounded square */
+            margin-bottom: 20px;  
+            margin-left: 32px;
+            margin-top: 30px;
+            margin-right: auto;
+        }
+      .profile-links {
+    margin-top: 9px; /* reduces big space above LinkedIn */
+    display: flex;
+    flex-direction: column;
+    gap: 9px; /* controls spacing between LinkedIn / GS / GitHub */
+}
+
+.profile-links a {
+    color: #212F3C;
+    text-decoration: none;
+    display: block;
+    margin-left: 30px;
+    font-size: 11px;
+}
+    /* Target only the Google Scholar text */
+.profile-links a:nth-child(2) span {
+    margin-left: -2px;  /* adjust -2, -3, -5 as needed */
+}
+      .profile-links i {
+    margin-right: 5px;
+    vertical-align: middle;  /* <-- This fixes the misalignment */
+}
+       @media (max-width: 768px) {
+  html, body {
+    flex-direction: column;
+    display: block;
+}
+
+    .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 80px;
+    margin: 0 15px 0 0;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.sidebar p {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    max-width: 250px;
+    text-align: left;
+}
+
+.profile-links {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.profile-links a {
+    margin-left: 0;
+    font-size: 11px;
+}
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header a {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="images/IMG_4494.JPG" alt="Saba Kheirinejad" class="profile-pic">
+        <h3>Saba Kheirinejad</h3>
+        <p> Instructor and Research Faculty, Department of Computer Science, Tennessee Tech University</p>
+        <div class="profile-links">
+            <a href="mailto:skheirin@uthsc.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/saba-kheirinejad/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=H95bR-0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <a href="https://github.com/SabaKheirinejad"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Cookeville, TN</a>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="portfolio.html">Projects</a>
+            <a href="teaching.html" class="active">Teaching</a>
+        </header>
+        <div class="content">
+            <h1>Teaching</h1>
+            <section id="teaching-approach">
+                <h2>Approach</h2>
+                <p>
+                    I teach data science and AI to students across a wide range of backgrounds, from computer science majors
+                    to students taking their first and only technical course. My courses emphasize hands-on practice with
+                    real datasets, plain language over jargon, and the habit of asking what a result actually means before
+                    reporting it. I care as much about how students reason with data and AI tools as about the tools themselves.
+                </p>
+            </section>
+
+            <section id="courses">
+                <h2>Courses at Tennessee Tech</h2>
+
+                <div class="course">
+                    <h3>CSC 3220 — Fundamentals of Data Science</h3>
+                    <span class="term">Fall 2026</span>
+                    <p>
+                        An undergraduate introduction to the full data science workflow: collecting and cleaning data,
+                        exploratory analysis, visualization, and a first look at statistical modeling and machine learning.
+                        Students work hands-on in R throughout the semester and finish with a project on a dataset of their choice.
+                    </p>
+                </div>
+
+                <div class="course">
+                    <h3>CSC 2220 — Data Science and AI for Everyone</h3>
+                    <span class="term">Fall 2026</span>
+                    <p>
+                        A general education course with no prerequisites, open to students from any major. We look at where data
+                        comes from, how AI systems are built and where they fail, and how to evaluate claims made with data in the
+                        news and at work. Labs use visual, no-code tools so that students can build and inspect models without
+                        writing code.
+                    </p>
+                </div>
+            </section>
+
+            <section id="mentoring">
+                <h2>Mentoring</h2>
+                <p>
+                    I supervise graduate teaching assistants and serve on master's thesis committees in the Department of
+                    Computer Science. I am happy to hear from students interested in human-centered AI, explainable AI, or
+                    digital health, whether for a thesis, an independent study, or an undergraduate research project.
+                    The best way to start is an email describing what you have worked on and what you would like to learn.
+                </p>
+            </section>
+        </div>
+        <footer>
+            <p>&copy; 2026 Saba Kheirinejad. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
